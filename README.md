@@ -14,8 +14,10 @@ from the passed command with the SCP.EXE full path (hardcoded below).
 
 For easy management, it is suggested that you compile this script to EXE using
 pyinstaller.  Install python and use these commands:
-> pip install pyinstaller
-> pyinstaller --onefile internal-scp.py
+
+pip install pyinstaller
+pyinstaller --onefile internal-scp.py
+
 You will find internal-scp.exe in the "build" directory.
 
 To implement it, copy the compiled internal-scp.exe file to the server and
