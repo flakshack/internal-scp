@@ -18,7 +18,7 @@ pyinstaller.  Install python and use these commands:
 pip install pyinstaller
 pyinstaller --onefile internal-scp.py
 
-You will find internal-scp.exe in the "build" directory.
+You will find internal-scp.exe in the "dist" directory.
 
 To implement it, copy the compiled internal-scp.exe file to the server and
 apply it to the user in the sshd_config.  For example to limit user johndoe:
