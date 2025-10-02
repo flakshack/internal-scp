@@ -15,7 +15,7 @@ from the passed command with the SCP.EXE full path (which is hardcoded).
 For easy management, it is suggested that you compile this script to EXE using
 pyinstaller.  Install python and use these commands:
 
-pip install pyinstaller
+pip install pyinstaller\
 pyinstaller --onefile internal-scp.py
 
 You will find internal-scp.exe in the "dist" directory.
@@ -23,13 +23,13 @@ You will find internal-scp.exe in the "dist" directory.
 To implement it, copy the compiled internal-scp.exe file to the server and
 apply it to the user in the sshd_config.  For example to limit user johndoe:
 
-Match User johndoe
-  ForceCommand c:/internal-scp/internal-scp.exe
-  ChrootDirectory c:/sftp/%u
+Match User johndoe\
+&nbsp; ForceCommand c:/internal-scp/internal-scp.exe\
+&nbsp; ChrootDirectory c:/sftp/%u
 
 Note that you should ensure that permissions are set properly on this EXE to
 prevent it from being overwritten by an SSH user.
 
-Use of this code is at your own risk. Someone smarter than me may know how
+**Use of this code is at your own risk.** Someone smarter than me may know how
 to bypass it. Assume worst case scenario is user has full SSH access limited
 by standard Windows permissions you've assigned.
