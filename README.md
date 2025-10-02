@@ -6,11 +6,11 @@ Why: The Windows OpenSSH server provides a secure SFTP-only functionality, but
 does not provide a similar SCP-only capability. If you have a system that only
 supports SCP, your only option is to allow it full SSH access, which presents
 security issues (for example, by default the user could run SSH.EXE to connect
-to other systems, perhaps bypassing a Firewall).
+to other systems, perhaps bypassing a firewall).
 
 When configured as a "ForceCommand" in sshd_config, this script will restrict
 a user to only running the Windows SCP.EXE command by replacing the SCP
-from the passed command with the SCP.EXE full path (hardcoded below).
+from the passed command with the SCP.EXE full path (which is hardcoded).
 
 For easy management, it is suggested that you compile this script to EXE using
 pyinstaller.  Install python and use these commands:
