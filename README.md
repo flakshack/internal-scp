@@ -1,6 +1,8 @@
 This script is intended to provide functionality similar to internal-sftp.exe
 when using OpenSSH on a Windows Server, except that it limits SSH users to SCP
-commands.
+commands. Note that as it only accepts SCP commands, it is not fully compatible
+with tools like WinSCP which uses other shell commands (for example to get
+directory lists). 
 
 Why: The Windows OpenSSH server provides a secure SFTP-only functionality, but
 does not provide a similar SCP-only capability. If you have a system that only
