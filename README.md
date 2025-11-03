@@ -29,9 +29,14 @@ Match User johndoe\
 &nbsp; ForceCommand c:/internal-scp/internal-scp.exe\
 &nbsp; ChrootDirectory c:/sftp/%u
 
-Note that you should ensure that permissions are set properly on this EXE to
-prevent it from being overwritten by an SSH user.
+**Note the launched SCP command itself is not limited to the ChrootDirectory from a 
+security perspective.**  While the user is limited to running SCP.EXE, this still
+allows the user to access any file on the host to which they have normal NTFS 
+permissions (read & write).  In particular, ensure that permissions are set 
+properly on this EXE to prevent it from being overwritten by the SSH user.
 
-**Use of this code is at your own risk.** Someone smarter than me may know how
-to bypass it. Assume worst case scenario is user has full SSH access limited
-by standard Windows permissions you've assigned.
+**Use of this code is at your own risk.** 
+You should assume the user has full SSH access limited by standard Windows 
+permissions you've assigned. A proper implementation would include firewall access
+controls, anti-malware software, application whitelisting, file access auditing, 
+logging, strict file permissions, and limited user rights.
