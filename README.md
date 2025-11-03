@@ -34,6 +34,8 @@ security perspective.**  While the user is limited to running SCP.EXE, this stil
 allows the user to access any file on the host to which they have normal NTFS 
 permissions (read & write).  In particular, ensure that permissions are set 
 properly on this EXE to prevent it from being overwritten by the SSH user.
+The SCP command could be used for network access to other servers as a proxy for 
+data exfiltration (possibly past a firewall).  
 
 **Use of this code is at your own risk.** 
 You should assume the user has full SSH access limited by standard Windows 
